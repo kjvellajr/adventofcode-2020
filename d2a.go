@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
+	"path/filepath"
 	"regexp"
 	"strconv"
 	"strings"
@@ -15,7 +17,7 @@ func check(e error) {
 }
 
 func main() {
-	fmt.Println("---day 2a---")
+	fmt.Printf("---%s---\n", filepath.Base(os.Args[0]))
 	data, err := ioutil.ReadFile("input/d2.input")
 	check(err)
 	re := regexp.MustCompile("([0-9]+)-([0-9]+) ([a-z]+): ([a-z]+)")

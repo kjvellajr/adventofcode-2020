@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -15,7 +16,7 @@ func check(e error) {
 }
 
 func main() {
-	fmt.Println("---day 1b---")
+	fmt.Printf("---%s---\n", filepath.Base(os.Args[0]))
 	data, err := ioutil.ReadFile("input/d1.input")
 	check(err)
 	array_string := strings.Split(string(data), "\n")

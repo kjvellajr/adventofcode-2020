@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -13,7 +15,7 @@ func check(e error) {
 }
 
 func main() {
-	fmt.Println("---day 3a---")
+	fmt.Printf("---%s---\n", filepath.Base(os.Args[0]))
 	data, err := ioutil.ReadFile("input/d3.input")
 	check(err)
 	lines := strings.Split(string(data), "\n")
